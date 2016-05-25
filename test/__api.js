@@ -14,7 +14,7 @@ describe('API', function(){
     });
 
     it('/ should return specified object', function testHealth(done){
-        request(server).get('/api/')
+        request(server).get('/api/v1')
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200,{"hello": "world"}, done);
